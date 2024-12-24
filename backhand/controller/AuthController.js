@@ -11,16 +11,9 @@ const signup = async (req,res) => {
         if (user) {
             return res.status(409).json({ message: "User already exists", success: false });
         }
-
-        // Create new user
         const newUser = new UserModel({ name, email, password });
-
-        // Hash the password
         newUser.password = await bcrypt.hash(password, 10);
-
-        // Save the user to the database
         await newUser.save();
-
         res.status(201).json({
             message: "SignUp successful",
             success: true
@@ -34,24 +27,17 @@ const signup = async (req,res) => {
     }
 };
 
-// Login function
 const loginUp = async (req, res) => {
     try {
         const { email, password } = req.body;
-
-        // Find the user
         const user = await UserModel.findOne({ email });
         if (!user) {
             return res.status(404).json({ message: "User not found", success: false });
         }
-
-        // Compare passwords
         const isPassEqual = await bcrypt.compare(password, user.password);
         if (!isPassEqual) {
             return res.status(401).json({ message: "Invalid credentials", success: false });
         }
-
-        // Create JWT token
         const jwtToken = JWT.sign(
             { email: user.email, _id: user._id },
             process.env.JWT_SECRET,

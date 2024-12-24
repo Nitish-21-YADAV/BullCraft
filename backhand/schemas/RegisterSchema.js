@@ -36,4 +36,4 @@ const RegisterSchema = new Schema({
     }
 });
 
-module.exports = {RegisterSchema};  // Ensure only the schema is exported
+module.exports = {RegisterSchema}; 
