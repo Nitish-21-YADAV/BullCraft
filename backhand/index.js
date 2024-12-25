@@ -22,7 +22,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); 
 
-app.use(cors());
+app.use(cors({origin:'https://bull-craft-fronthand.vercel.app/'}));
 app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 3000;
