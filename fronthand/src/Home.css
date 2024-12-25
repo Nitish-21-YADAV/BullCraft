@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+body {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+.homeContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+.heroSection {
+    height: 85vh;
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 40px;
+}
+.logoImage {
+    height: 120px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    border: 3px solid #000;
+}
+.inputContainer {
+    width: 100%;
+    position: relative;
+    overflow: visible;
+    width: 250px;
+    margin: 20px auto auto 35%;
+}
+.contactInput {
+    background-color: #fff;
+    width: 70vb;
+    padding: 10px 15px;
+    border: 2px solid #333;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+.inputIcon{
+    position: absolute;
+    top: 50%;
+    width: max-content;
+    margin-left:100%;
+    padding: 8px 30px;
+    transform: translateY(-50%);
+    color: #333;
+}
+.headline {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000;
+    margin: 20px 0;
+}
+.highlight {
+    color: #f57c00;
+}
+.heroText {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #555;
+}
+.tagline {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 15px 0;
+}
+.ctaButton {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+.ctaButton:hover {
+    background-color: #f57c00;
+}
+.features {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    width: 100%;
+    text-align: center;
+}
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #000;
+}
+.featureCards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.featureCard {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.featureCard:hover {
+    transform: translateY(-10px);
+}
+.featureCard h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f57c00;
+}
+.featureCard p {
+    font-size: 1rem;
+    color: #555;
+}
