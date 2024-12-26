@@ -11,7 +11,7 @@ function Buy() {
     
     useEffect(() => {
         const fetchStocks = async () => {
-            const response = await fetch("http://localhost:3000/stocks");
+            const response = await fetch(`${process.env.REACT_APP_Backhand_URL}/stocks`);
             const data = await response.json()
             setStocks(data);
         }
@@ -20,7 +20,7 @@ function Buy() {
 
     useEffect(()=>{
         const fetchTarget = async ()=>{
-            const resp = await fetch("http://localhost:3000/Target?userId=${userId}");
+            const resp = await fetch(`${process.env.REACT_APP_Backhand_URL}/Target?userId=${userId}`);
             const targetData = await resp.json(); 
             setTarget(targetData)
         }
@@ -58,7 +58,7 @@ function Buy() {
             quantity: qntyValue
         }
         try {
-            const response = await fetch("http://localhost:3000/BuyingShare",
+            const response = await fetch(`${process.env.REACT_APP_Backhand_URL}/BuyingShare`,
                 {
                     method: "POST",
                     headers: {

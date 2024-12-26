@@ -22,12 +22,12 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); 
 
-// app.use(cors({origin:'https://bull-craft-fronthand.vercel.app'}));
-app.use(cors({
-    origin: 'https://bull-craft-fronthand.vercel.app',
-    methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type'],
-  }));
+app.use(cors());
+// app.use(cors({
+//     origin: 'https://bull-craft-fronthand.vercel.app',
+//     methods: ['GET', 'POST'],
+//     allowedHeaders: ['Content-Type'],
+//   }));
 app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 3000;
@@ -312,4 +312,4 @@ app.listen(PORT, () => {
     mongoose.connect(uri);
     console.log("Connected");
 
-}) 
+})  

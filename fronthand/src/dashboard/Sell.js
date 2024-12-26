@@ -9,7 +9,7 @@ function Sell() {
 
     useEffect( ()=>{
         const holdingData = async()=> {
-        const response= await fetch(`http://localhost:3000/gettingHolding?userId=${userId}`);
+        const response= await fetch(`${process.env.REACT_APP_Backhand_URL}/gettingHolding?userId=${userId}`);
         const data = await response.json();
         setHolding(data);
         }
@@ -30,8 +30,7 @@ function Sell() {
 
         const Qty = Number(e.target.value);
         setQntyValue(Qty)
-        console.log("Qty from from ",Qty);
-        console.log("Qty from from ",selectedShare.qty);
+       
         
     }
     
