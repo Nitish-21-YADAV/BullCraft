@@ -301,6 +301,7 @@ html {
   gap:2rem;
 }
 .reviewcard1 img{
+  height: 14vh;
   width: 20%;
   border-radius: 50%;
 }
