@@ -32,6 +32,7 @@ app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 3000;
 const uri = process.env.MONGO_URL;
+mongoose.connect(uri); 
 
 let userIdValue = null; 
 
@@ -311,7 +312,7 @@ cron.schedule("*/1 * * * *", async () => {
 app.listen(PORT, () => {
     console.log("Shri Ganesh");
     console.log(`http://localhost:${PORT}`);
-    mongoose.connect(uri);
+    
     console.log("Connected");
 
 })  
