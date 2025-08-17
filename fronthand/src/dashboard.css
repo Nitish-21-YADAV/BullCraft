@@ -856,7 +856,6 @@ hr {
   color: #ffffff;
 }
 
-/* sudo selectors */
 .search:focus {
   outline: none;
 }

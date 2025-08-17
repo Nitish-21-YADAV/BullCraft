@@ -28,7 +28,7 @@ function SignUp() {
             const response = await fetch(url, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(signInfo)
+                body: JSON.stringify(signInfo) 
             });
             const result = await response.json();
             const { success, message, error } = result;

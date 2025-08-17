@@ -36,7 +36,9 @@ const uri = process.env.MONGO_URL;
 let userIdValue = null; 
 
 
-
+app.get('/',(req,res)=>{
+    res.send("Done the backend is ready")
+})
 
 app.get('/stocks', async (req, res) => {
     const stocks = await StocksModel.find()
